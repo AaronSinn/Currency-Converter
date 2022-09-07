@@ -1,3 +1,3 @@
 # Currency-Converter
 
-This project converts international currencies. I made this as a way of learning Javascript and APIs.
+This project converts international currencies using the https://exchangeratesapi.io/ API. I made this as a way of learning Javascript and APIs.
