@@ -1,0 +1,84 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito-Bold:wght@400;600&display=swap');
+
+body{
+    background-color: blue;
+    display: grid;
+    align-items: center;
+    justify-content: center ;
+}
+
+.container{
+    background-color: white;
+    width: 500px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:25px 0px 35px; /*top right bottom left*/
+    margin-top: 135px;
+    border-radius: 10px;
+}
+
+#amount{
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#currency_lists_from{
+    
+    cursor: pointer;
+    padding:20px 0px 20px 0px;/*top right bottom left*/
+    font-size: 18px;
+    text-align: center;
+}
+
+#currency_lists_to{
+    
+    cursor: pointer;
+    padding:20px 0px 20px 0px;/*top right bottom left*/
+    font-size: 18px;
+    text-align: center;
+}
+
+
+#output_text{
+    display: grid;
+    justify-content: center;
+    font-size: 22px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.text{
+    display: grid;
+    justify-content: center;
+    font-family: 'Nunito-Bold', sans-serif;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+#convert{
+    margin-top: 30px;
+    padding: 25px 44px 25px 44px;
+    background-color: blue;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color:white;
+    font-size: 23px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#convert:hover{
+    background-color: rgb(46, 46, 255);
+}
+
+#result_text{
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
