@@ -1,13 +1,25 @@
 document.addEventListener('DOMContentLoaded',function(){
-    document.querySelector("form").onsubmit = function(){
-        var myHeaders = new Headers();
-        myHeaders.append("apikey", "mBWJT44G2F2BE0arhRrk2D99MDfu0vAZ");
+    
+    var myHeaders = new Headers();
+    myHeaders.append("apikey", "mBWJT44G2F2BE0arhRrk2D99MDfu0vAZ");
 
-        var requestOptions = {
-        method: 'GET',
-        redirect: 'follow',
-        headers: myHeaders
-        };
+    var requestOptions = {
+    method: 'GET',
+    redirect: 'follow',
+    headers: myHeaders
+    };
+
+    fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${"USD"}&from=${"CAD"}&amount=${1}`, requestOptions)
+    .then(response => response.json())
+    .then(data =>{
+        var conversion = data.result;
+        document.querySelector("#result_text").innerHTML = `1 CAD is ${conversion.toFixed(3)} USD`;
+    })
+    .catch(error => console.log('error', error));
+    
+
+
+    document.querySelector("form").onsubmit = function(){
 
         //Variables are used in the api call to get the data the user requests
         var From = document.getElementById("currency_lists_from");
@@ -15,7 +27,7 @@ document.addEventListener('DOMContentLoaded',function(){
         var amount = document.getElementById("amount");
         
         if(amount.value<0){//ensures that no negative numbers are inputed
-            document.querySelector('p').innerHTML = "Invalid input. Use positive numbers.";
+            document.querySelector("#result_text").innerHTML = "Invalid input. Use positive numbers.";
         }
 
         //can only use 250 requests per month
@@ -28,4 +40,10 @@ document.addEventListener('DOMContentLoaded',function(){
         .catch(error => console.log('error', error));
         return false;
     }
+    document.querySelectorAll(".colourButtons").forEach(function(button){
+        button.onclick = function(){
+            document.querySelector("body").style.backgroundColor = button.dataset.color;
+            document.querySelector("#convert").style.backgroundColor = button.dataset.color;
+        }
+    });
 });
