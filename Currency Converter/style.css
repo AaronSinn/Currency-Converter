@@ -9,6 +9,14 @@ body{
     justify-content: center ;
 }
 
+#title{
+    text-align: center;
+    font-size: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+    color: aliceblue;
+}
+
 .container{
     background-color: white;
     width: 500px;
@@ -16,8 +24,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding:25px 0px 35px; /*top right bottom left*/
-    margin-top: 135px;
+    padding:25px 17px 35px 17px; /*top right bottom left*/
+    margin-top: 5px; /*if this value is greater than 5, the second optgroup opens upward*/
     border-radius: 10px;
 }
 
@@ -73,12 +81,56 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
-#convert:hover{
-    background-color: rgb(46, 46, 255);
-}
-
 #result_text{
     margin-top: 50px;
     font-size: 20px;
     font-family: 'Nunito', sans-serif;
+}
+
+.colourButtonsArea{
+    width: 500px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.colourButtons{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin: 15px 10px 0px 10px;
+    cursor: pointer;
+    border-width: 3px;
+}
+
+#redButton{
+    background-color: rgb(233, 53, 53);
+}
+#blueButton{
+    background-color: blue;
+}
+#greenButton{
+    background-color: forestgreen;
+}
+#pinkButton{
+    background-color: palevioletred;
+}
+#grayButton{
+    background-color: gray;
+}
+
+#redButton:hover{
+    background-color: rgb(218, 79, 79);
+}
+#blueButton:hover{
+    background-color: rgb(46, 46, 255);
+}
+#greenButton:hover{
+    background-color: rgb(72, 168, 72);
+}
+#pinkButton:hover{
+    background-color: rgb(218, 133, 161);
+}
+#grayButton:hover{
+    background-color: rgb(155, 152, 152);
 }
