@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded',function(){
     
     var myHeaders = new Headers();
-    myHeaders.append("apikey", "mBWJT44G2F2BE0arhRrk2D99MDfu0vAZ");
+    myHeaders.append("apikey", "IDK if I can show the API key. Sorry :(");
 
     var requestOptions = {
     method: 'GET',
